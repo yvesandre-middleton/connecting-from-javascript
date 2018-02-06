@@ -1,5 +1,4 @@
 const settings = require("./settings");
-const insert = require("./add_person.js")
 
 var knex = require('knex')({
   client: 'pg',
@@ -13,13 +12,12 @@ var knex = require('knex')({
   }
 });
 
+knex('famous_people').insert({first_name: 'Albert', last_name: 'Einstein', birthdate: '1879-03-14'}).asCallback()
 
 
-knex.select().from('famous_people')
-.asCallback(function(err, rows) {
-  if (err)  {
-    return console.error(err);
-    }
-      console.log(rows);
-      knex.destroy();
-});
+
+
+
+
+
+
