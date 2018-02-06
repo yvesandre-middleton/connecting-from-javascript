@@ -29,9 +29,9 @@ db.connect((err, connection) => {
     console.log(result)
   })
 
-  setTimeout(() => {db.end()}, 2000) // We need to wait queries to be done
-                                     // before closing the connection.
-                                     // I *promise* there's a better way to
-                                     // do this! ;)
+//   setTimeout(() => {db.end()}, 2000) // We need to wait queries to be done
+//                                      // before closing the connection.
+//                                      // I *promise* there's a better way to
+//                                      // do this! ;)
 })
 
